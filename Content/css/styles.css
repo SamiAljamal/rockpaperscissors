@@ -5,3 +5,7 @@ h1 {
 label{
   font-size: 33px;
 }
+
+#rock, #paper, #scissors {
+  display: none;
+}

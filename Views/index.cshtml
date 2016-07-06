@@ -4,12 +4,13 @@
     <title>RPS</title>
     <link rel="stylesheet" href="../Content/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Content/css/styles.css" media="screen" charset="utf-8">
+
   </head>
   <body>
     <div class="container">
       <h1>Welcome to Rock Paper Scissors!</h1>
       <div class="jumbotron">
-        <form action="/RPS/created" method="post">
+        <form action="/RPS/created" method="post" id="display">
           <div class = "form-group">
             <label for="name">Choose Mofo!</label>
             <p><input type="radio" name="player1" id="player1" value="rock" required>Rock</p>
@@ -21,27 +22,20 @@
       </div>
       <div class="jumbotron">
         <p>
-          @Model[0];
+          @Model[0]
         </p>
       </div>
-      <!-- <div class="jumbotron">
-        @{if (Model.Length > 0)
-          {
-          @if (Model[1] == "rock")
-          {
-            <img src="Content/img/Rock.jpg">
-          }
-          else if (Model[1] == "paper")
-          {
-            <img src="Content/img/Paper.jpg">
-          }
-          else if (Model[1] == "scissors")
-          {
-            <img src="Content/img/scissors.jpg">
-          }
-        }
-      }
-      </div> -->
+      <div class="jumbotron pics">
+        <div id="rock">
+          <img src="../Content/img/Rock.jpg" alt="" />
+        </div>
+        <div id="paper">
+          <img src="../Content/img/Paper.jpg" alt="" />
+        </div>
+        <div id="scissors">
+          <img src="../Content/img/scissors.jpg" alt="" />
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -10,7 +10,7 @@ namespace RockPaperScissors
     public HomeModule()
     {
       Get["/"] =_=> {
-        return View["index.cshtml","  "];
+        return View["index.cshtml","Start game"];
       };
       Post["/RPS/created"] =_=> {
         RockPaperScissors newGame = new RockPaperScissors();
