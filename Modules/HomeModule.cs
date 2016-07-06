@@ -10,11 +10,11 @@ namespace RockPaperScissors
     public HomeModule()
     {
       Get["/"] =_=> {
-        return View["index.cshtml", "You haven't entered anything yet"];
+        return View["index.cshtml","  "];
       };
       Post["/RPS/created"] =_=> {
         RockPaperScissors newGame = new RockPaperScissors();
-        string results = newGame.Shoot(Request.Form["player1"]);
+        List<string> results = newGame.Shoot(Request.Form["player1"]);
         return View["index.cshtml",results];
       };
     }

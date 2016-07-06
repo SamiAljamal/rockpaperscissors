@@ -1,14 +1,47 @@
-<h1>Welcome to Rock Paper Scissors!</h1>
-<form action="/RPS/created" method="post">
-  <div class = "form-group">
-    <label for="name">Player 1</label>
-    <p><input type="radio" name="player1" id="player1" value="rock" required>Rock</p>
-    <p><input type="radio" name="player1" id="player1" value="paper">Paper</p>
-    <p><input type="radio" name="player1" id="player1" value="scissors">Scissors</p>
-  </div>
-  <button type="submit"  class="btn btn-default center-block" >Submit</button>
-</form>
-
-<p>
-  @Model
-</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RPS</title>
+    <link rel="stylesheet" href="../Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Content/css/styles.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Rock Paper Scissors!</h1>
+      <div class="jumbotron">
+        <form action="/RPS/created" method="post">
+          <div class = "form-group">
+            <label for="name">Choose Mofo!</label>
+            <p><input type="radio" name="player1" id="player1" value="rock" required>Rock</p>
+            <p><input type="radio" name="player1" id="player1" value="paper">Paper</p>
+            <p><input type="radio" name="player1" id="player1" value="scissors">Scissors</p>
+          </div>
+          <button type="submit"  class="btn btn-default center-block" >Submit</button>
+        </form>
+      </div>
+      <div class="jumbotron">
+        <p>
+          @Model[0];
+        </p>
+      </div>
+      <!-- <div class="jumbotron">
+        @{if (Model.Length > 0)
+          {
+          @if (Model[1] == "rock")
+          {
+            <img src="Content/img/Rock.jpg">
+          }
+          else if (Model[1] == "paper")
+          {
+            <img src="Content/img/Paper.jpg">
+          }
+          else if (Model[1] == "scissors")
+          {
+            <img src="Content/img/scissors.jpg">
+          }
+        }
+      }
+      </div> -->
+    </div>
+  </body>
+</html>
