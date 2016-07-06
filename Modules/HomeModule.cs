@@ -14,11 +14,7 @@ namespace RockPaperScissors
       };
       Post["/RPS/created"] =_=> {
         RockPaperScissors newGame = new RockPaperScissors();
-        string results = newGame.Shoot(
-                                        Request.Form["player1"],
-                                        Request.Form["player2"]
-
-        );
+        string results = newGame.Shoot(Request.Form["player1"]);
         return View["index.cshtml",results];
       };
     }

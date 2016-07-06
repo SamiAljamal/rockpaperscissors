@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System;
 using RockPaperScissors;
+using System.IO;
+
 
 namespace RockPaperScissors
 {
@@ -13,20 +15,25 @@ namespace RockPaperScissors
       { "rock", "scissors"},
       { "scissors", "paper"}
     };
+    public static List<string>AiChoice = new List<string>{"rock","paper","scissors"};
 
-    public string Shoot (string player1, string player2)
+
+    public string Shoot (string player1)
     {
+       Random r = new Random();
+      int index = r.Next(AiChoice.Count);
+      string player2 = AiChoice[index];
       if (player1 == player2)
       {
-        Result="It's a draw";
+        Result="It's a draw! Computer chose " + player2;
       }
       else if (playWins[player1] == player2)
       {
-        Result="Player 1 Wins";
+        Result="You win! Computer chose " + player2;
       }
       else if (playWins[player2] == player1)
       {
-        Result="Player 2 Wins";
+        Result="Computer Wins! Computer chose " + player2;
       }
       return Result;
     }
