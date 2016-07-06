@@ -1,5 +1,6 @@
 using Xunit;
 using System.Collections.Generic;
+using RockPaperScissors;
 namespace RockPaperScissors
 {
   public class RockPaperScissorsTest
