@@ -1,14 +1,36 @@
-<h1>Welcome to Rock Paper Scissors!</h1>
-<form action="/RPS/created" method="post">
-  <div class = "form-group">
-    <label for="name">Player 1</label>
-    <p><input type="radio" name="player1" id="player1" value="rock" required>Rock</p>
-    <p><input type="radio" name="player1" id="player1" value="paper">Paper</p>
-    <p><input type="radio" name="player1" id="player1" value="scissors">Scissors</p>
-  </div>
-  <button type="submit"  class="btn btn-default center-block" >Submit</button>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../Content/js/jquery-3.0.0.js"></script>
+    <script src="../Content/js/scripts.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Welcome to Rock Paper Scissors!</h1>
 
-<p>
-  @Model
-</p>
+    <form action="/RPS/created" method="post">
+      <div class = "form-group">
+        <label for="name">Player 1</label>
+        <p><input type="radio" name="player1" id="player1" value="rock" required>Rock</p>
+        <p><input type="radio" name="player1" id="player1" value="paper">Paper</p>
+        <p><input type="radio" name="player1" id="player1" value="scissors">Scissors</p>
+      </div>
+      <button type="submit"  class="btn btn-default center-block" >Submit</button>
+    </form>
+
+    <p>
+      @Model
+    </p>
+
+    <div class="jumbotron">
+      <div class="image1" id="img1">
+        <img src="" alt="" />
+
+      </div>
+
+
+    </div>
+
+  </body>
+</html>
